@@ -1,0 +1,40 @@
+"""
+--------------------------------------------------
+Title       : Find a String
+Difficulty  : Easy
+Category    : Strings
+Platform    : HackerRank
+Link        : https://www.hackerrank.com/challenges/find-a-string/problem
+--------------------------------------------------
+
+🧾 Problem Statement:
+You are given two strings. Count the number of times the second string occurs 
+in the first string as a substring.
+
+Example:
+Input: string = "ABCDCDC", sub_string = "CDC"
+Output: 2
+
+🧠 Approach:
+- Use a sliding window to check each substring of length equal to sub_string.
+- Increment count if a match is found.
+
+Time Complexity  : O(n * m)
+Space Complexity : O(1)
+"""
+
+# --- Function Definition ---
+
+def count_substring(string, sub_string):
+    count = 0
+    for i in range (len(string) - len(sub_string) +1 ):
+        if string[i : len(sub_string)+i] == sub_string:
+            count += 1
+    return count
+    
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+    
+    count = count_substring(string, sub_string)
+    print(count)
