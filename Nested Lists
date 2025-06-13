@@ -1,0 +1,33 @@
+def sort_name(record):
+    scores = []
+    for student in record:
+        scores.append(student[1])
+    unique_sorted_scores = sorted(list(set(scores)))
+
+    
+    if len(unique_sorted_scores) < 2:
+        return
+
+    second_lowest_score = unique_sorted_scores[1]
+
+    name_second_lowest = []
+    for student_name, student_score in record: 
+        if student_score == second_lowest_score:
+            name_second_lowest.append(student_name)
+
+    name_second_lowest.sort() 
+
+    for name in name_second_lowest:
+        print(name)
+
+
+if __name__ == '__main__':
+    all_students_records = [] 
+    num_students = int(input()) 
+
+    for _ in range(num_students): 
+        name = input()
+        score = float(input())
+        all_students_records.append([name, score]) 
+        
+    sort_name(all_students_records)
