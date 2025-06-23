@@ -1,6 +1,6 @@
 t = int(input())
 
-for i in range(t):
+for _ in range(t):
     n1 = int(input())
     val1 = set(map(int, input().split()))
     
