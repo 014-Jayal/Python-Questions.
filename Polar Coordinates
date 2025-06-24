@@ -1,0 +1,14 @@
+import cmath
+
+def polar_coordinate(z):
+    r = abs(z)
+    phase = cmath.phase(z)
+    
+    return r, phase
+    
+z = complex(input().strip())
+
+r, theta = polar_coordinate(z)
+
+print(r)
+print(theta)
