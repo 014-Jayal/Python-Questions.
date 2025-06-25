@@ -2,5 +2,5 @@ for i in range(int(input())):
     try:
         a,b=map(int,input().split())
         print(a//b)
-    except (ZeroDivisionError,ValueError)  as e:
+    except (ZeroDivisionError,ValueError)  as e: #Exception
         print("Error Code:",e)
