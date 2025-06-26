@@ -1,0 +1,10 @@
+N,X = map(int, input().split())
+
+marks = []
+for _ in range(X):
+    
+    subject = list(map(float, input().split()))
+    marks.append(subject)
+    
+for Student_marks in list(zip(*marks)):
+    print(sum(Student_marks)/X)
