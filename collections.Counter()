@@ -1,0 +1,20 @@
+#Without Counter
+X = int(input())
+S_size = list(map(int, input().split()))
+
+N = int(input())
+
+price = []
+for _ in range(N):
+    size_amount = list(map(int, input().split()))
+    size = size_amount[0]
+    amount = size_amount[1]
+    
+    if size in S_size:
+        price.append(amount)
+        S_size.remove(size)
+        
+print(sum(price))
+
+-----------------------------------------------------------------------
+
