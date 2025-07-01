@@ -1,0 +1,21 @@
+from collections import deque
+
+N = int(input())
+d = deque()
+
+for i in range(N):
+    opp = list(input().split())
+    
+    if opp[0] == 'append':
+        d.append(opp[1])
+    
+    if opp[0] == 'pop':
+        d.pop()
+        
+    if opp[0] == 'popleft':
+        d.popleft()
+        
+    if opp[0] == 'appendleft':
+        d.appendleft(opp[1])
+        
+print(" ".join(list(d)))
