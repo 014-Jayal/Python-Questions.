@@ -1,0 +1,9 @@
+import numpy
+
+def arrays(arr):
+    org = numpy.array(arr, float)
+    return org[::-1]
+
+arr = input().strip().split(' ')
+result = arrays(arr)
+print(result)
