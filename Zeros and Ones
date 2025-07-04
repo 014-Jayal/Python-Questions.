@@ -1,9 +1,6 @@
 import numpy
 
-arr = list(map(int, input().split()))
+arr = tuple(map(int, input().split()))
 
-n1 = numpy.zeros(arr, dtype = int)
-n2 = numpy.ones(arr, dtype = int)
-
-print(n1)
-print(n2)
+print(numpy.zeros(arr, dtype=int))
+print(numpy.ones(arr, dtype=int))
