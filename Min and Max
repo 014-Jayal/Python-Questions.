@@ -1,0 +1,7 @@
+import numpy as  np
+
+N, M = list(map(int,input().split()))
+
+val = np.array([list(map(int, input().split())) for i in range(N)])
+
+print(np.max(np.min(val, axis=1)))
