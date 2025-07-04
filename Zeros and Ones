@@ -1,0 +1,9 @@
+import numpy
+
+arr = list(map(int, input().split()))
+
+n1 = numpy.zeros(arr, dtype = int)
+n2 = numpy.ones(arr, dtype = int)
+
+print(n1)
+print(n2)
