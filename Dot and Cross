@@ -17,3 +17,19 @@ arr_A = numpy.array([list(map(int,input().split())) for i in range(n)])
 arr_B = numpy.array([list(map(int,input().split())) for i in range(n)])
 
 print(numpy.matmul(arr_A,arr_B))
+
+--------------------------------------------------------------------------------
+
+import numpy as np
+
+n = int(input())
+
+a = np.array([list(map(int, input().split())) for _ in range(n)])
+b = np.array([list(map(int, input().split())) for _ in range(n)])
+
+matrix = np.zeros((n, n), dtype = int)
+for i in range(n):
+    for j in range(n):
+        matrix[i, j] = np.sum([a[i, k] * b[k, j] for k in range(n)])
+    
+print(matrix)
