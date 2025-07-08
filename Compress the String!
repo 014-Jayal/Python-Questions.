@@ -1,0 +1,25 @@
+from itertools import groupby
+s = input()
+for char, grouped_iter in groupby(s):
+    print(f"({len(list(grouped_iter))}, {char})", end = " ")
+
+--------------------------------------------------------------------
+
+string= input()
+
+lst= [element for element in string]
+
+count= 1
+
+prev= lst[0]
+
+for i in range(1, len(lst)):
+    if lst[i] == prev:
+        count = count + 1
+
+    else:
+        print(f"({count}, {prev})", end= " ")
+        prev= lst[i]
+        count = 1
+
+print(f"({count}, {prev})")
