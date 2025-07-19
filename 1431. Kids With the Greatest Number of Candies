@@ -1,0 +1,33 @@
+class Solution:
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        max = 0
+        result = []
+
+        max = sorted(candies)[-1]
+        for i in candies:
+            if i + extraCandies >= max:
+                result.append(True)
+            else:
+                result.append(False)
+        
+        return result
+
+-------------------------------------------------------------------------------------------------
+
+class Solution:
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        max = 0
+        result = []
+
+        for j in candies:
+            if j > max:
+                max = j
+
+        for i in candies:
+
+            if i + extraCandies >= max:
+                result.append(True)
+            else:
+                result.append(False)
+        
+        return result
