@@ -1,0 +1,21 @@
+class Solution:
+    def subtractProductAndSum(self, n: int) -> int:
+        temp = n
+        sumo = 0
+        prod = 1
+
+        while temp>0 :
+            rem = temp%10
+            temp//= 10
+
+            sumo += rem
+            prod *= rem
+
+        return prod - sumo
+            
+------------------------------------------------------------------
+
+def subtractProductAndSum(n)t:
+    return eval('*'.join(str(n))) - eval('+'.join(str(n)))
+
+#Eval is dangeroud, if you use it in an interview, first understand its security implications.
