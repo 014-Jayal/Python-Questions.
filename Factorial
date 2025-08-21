@@ -1,0 +1,23 @@
+#Iterative
+
+class Solution:
+    def factorial (self, n):
+        
+        r = 1
+        
+        for i in range(2, n+1):
+            r *= i
+            
+        return r
+
+-------------------------------------
+
+#Recursive
+
+class Solution:
+    def factorial (self, n):
+        
+        if n == 0:
+            return 1
+            
+        return n * self.factorial(n-1)
