@@ -10,7 +10,7 @@ class Solution:
 
 ----------------------------------------------------
 
-#Optimized
+#Optimized, but not enough fast
 
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
@@ -22,3 +22,13 @@ class Solution:
             return False
 
         return self.isPowerOfTwo(n//2)
+
+---------------------------------------------------
+
+#Faster than loop and recursion bcoz of the use of Bitwise operator.
+
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
+        if n == 0:
+            return False
+        return n & n-1 == 0
