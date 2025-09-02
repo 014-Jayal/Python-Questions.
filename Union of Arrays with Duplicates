@@ -1,0 +1,15 @@
+class Solution:    
+    def findUnion(self, a, b):
+        
+        hashset = set()
+        
+        for i in a:
+            hashset.add(i)
+            
+        for i in b:
+            hashset.add(i)
+            
+        return list(hashset)
+
+----------------------------------------
+
