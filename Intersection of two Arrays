@@ -1,0 +1,32 @@
+class Solution:
+    def intersect(self, a, b):
+        
+        aset = set(a)
+        
+        seen = set()
+        res = []
+        
+        for el in b:
+            if el in aset and el not in seen:
+                seen.add(el)
+                res.append(el)
+                
+        return res
+
+---------------------------------------------------------
+
+class Solution:
+    def intersect(self, a, b):
+        
+        aset = set(a)
+        
+        
+        res = []
+        
+        for el in b:
+            if el in aset:
+                
+                res.append(el)
+                aset.remove(el)
+                
+        return res
