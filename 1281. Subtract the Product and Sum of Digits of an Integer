@@ -18,4 +18,4 @@ class Solution:
 def subtractProductAndSum(n)t:
     return eval('*'.join(str(n))) - eval('+'.join(str(n)))
 
-#Eval is dangeroud, if you use it in an interview, first understand its security implications.
+#Eval is dangerous, if you use it in an interview, first understand its security implications.
