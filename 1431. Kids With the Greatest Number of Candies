@@ -19,7 +19,7 @@ class Solution:
         max = 0
         result = []
 
-        for j in candies:
+        for j in candies: #insted of using sorted()
             if j > max:
                 max = j
 
