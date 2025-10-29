@@ -6,4 +6,24 @@ if __name__ == '__main__':
     xe = sorted(arr)
     print(xe[len(xe)-2])
 
+-------------------------------------------------------
 
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    
+    fmax = float('-inf')
+    smax = float('-inf')
+    
+    for i in arr:
+        if i > fmax:
+            smax = fmax
+            fmax = i
+        elif (i < fmax and i > smax):
+            smax = i
+    
+    if smax == float('-inf'):
+        print(fmax)
+    else:        
+        print(smax) 
+            
