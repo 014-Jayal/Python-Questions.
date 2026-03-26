@@ -1,0 +1,7 @@
+class Solution:
+    def checkStatus(self, a, b, flag):
+        con1 = ((a >= 0) ^ (b >= 0) and not flag)
+        
+        con2 = ((a < 0) and (b < 0) and flag)
+        
+        return con1 or con2
