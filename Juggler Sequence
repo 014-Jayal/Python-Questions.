@@ -1,0 +1,13 @@
+class Solution:
+    def jugglerSequence(self, n):
+        result = [n]
+        
+        while n != 1:
+            if n % 2 == 0:
+                n = int(n ** (1/2))
+            else:
+                n = int(n ** (3/2))
+            
+            result.append(n)
+            
+        return result
