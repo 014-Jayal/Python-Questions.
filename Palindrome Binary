@@ -1,0 +1,7 @@
+class Solution:
+    def isBinaryPalindrome(self, n):
+        s = bin(n)[2:]
+        return s == s[::-1]
+
+----------------------------------------------
+
