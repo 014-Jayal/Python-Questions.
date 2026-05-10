@@ -1,0 +1,8 @@
+def isPalindrome(s):
+    s = s.lower()
+    rev = ''
+    for c in s:
+        rev = c + rev
+        
+    return rev == s
+    
