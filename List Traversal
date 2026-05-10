@@ -1,0 +1,19 @@
+def listTraversal(arr):
+        print(*arr)
+
+--------------------------------
+
+def listTraversal(arr):
+    print(" ".join(map(str, arr)))
+
+------------------------------------------
+
+def listTraversal(arr):
+    n = len(arr)
+    for i in range(n):
+        if i == n-1:
+            print(arr[i], end = "")
+        else:
+            print(arr[i], end = " ")
+            
+    print()
