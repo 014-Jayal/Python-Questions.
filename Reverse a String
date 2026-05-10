@@ -1,0 +1,18 @@
+class Solution:
+     def reverseString(self, s: str) -> str:
+        return s[::-1]
+
+---------------------------------------------------
+
+class Solution:
+     def reverseString(self, s: str) -> str:
+        rev = ''
+        for c in s:
+            rev = c + rev
+        return rev
+
+---------------------------------------------------
+
+class Solution:
+     def reverseString(self, s: str) -> str:
+        return "".join(reversed(s))
