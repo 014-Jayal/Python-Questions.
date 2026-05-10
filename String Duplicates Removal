@@ -1,0 +1,13 @@
+class Solution:
+ 
+    def removeDuplicates(self, s):
+        
+        seen = set()
+        ans = []
+        
+        for char in s:
+            if char not in seen:
+                seen.add(char)
+                ans.append(char)
+                
+        return "".join(ans)
